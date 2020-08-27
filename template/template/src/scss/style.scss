@@ -1,0 +1,66 @@
+//!------------Variables------------
+$mxw: "";
+$bgc: #fff;
+//!------------------------------------
+//?------------mixin------------
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+//?------------------------------------
+
+//?------------fonts------------
+
+@import "fonts";
+
+//*Default font:
+$font_family: "";
+//?------------------------------------
+
+//*------------styles------------
+@import "reset";
+//!@import "slider";
+@import "header";
+@import "footer";
+//*------------------------------------
+
+//TODO------------workplace------------
+//*------------container------------
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: $bgc;
+}
+.container {
+  max-width: $mxw;
+  margin: 0 auto;
+}
+//*-----------------ibg-------------------
+//?-explanation of code to look at README-
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  img {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+//*---------------------------------------
+
+//TODO------------------------------------
