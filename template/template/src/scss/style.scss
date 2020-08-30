@@ -1,5 +1,5 @@
 //!------------Variables------------
-$mxw: "";
+$mxw: 1170px;
 $bgc: #fff;
 //!------------------------------------
 //?------------mixin------------
@@ -20,7 +20,7 @@ $bgc: #fff;
 @import "fonts";
 
 //*Default font:
-$font_family: "";
+$font_family: "Montserrat", sans-serif;
 //?------------------------------------
 
 //*------------styles------------
@@ -62,5 +62,11 @@ $font_family: "";
   }
 }
 //*---------------------------------------
-
+.page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 //TODO------------------------------------

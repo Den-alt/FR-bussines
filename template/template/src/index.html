@@ -10,7 +10,10 @@
     />
     <title>Document</title>
     <!--add your own script for connecting to Font Awesome-->
-    <script src="" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/46f8ed1ca2.js"
+      crossorigin="anonymous"
+    ></script>
     <!---->
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -21,8 +24,9 @@
       <main class="page">
         @@include("_header.html", {})
         <!--If fullscreen is needed-->
-        <div class="main-screen"></div>
-        <div class="content"></div>
+        <div class="content">
+          <div class="main-screen"></div>
+        </div>
         @@include("_footer.html",{})
       </main>
     </div>
