@@ -103,6 +103,8 @@ h6 {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 25;
+  background-color: white;
 }
 
 .header__body {
@@ -117,7 +119,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 10px;
+  margin: 40px 0;
 }
 
 .header__logo {
@@ -281,6 +283,122 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.content {
+  margin: 101px 0 0 0;
+}
+
+.blue-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.blue-bg::after {
+  content: "";
+  position: absolute;
+  width: 31%;
+  height: 130%;
+  left: -50px;
+  top: -95px;
+  -webkit-transform: rotate(18deg);
+      -ms-transform: rotate(18deg);
+          transform: rotate(18deg);
+  background-image: -o-linear-gradient(252deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+  background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+}
+
+.main-screen__label {
+  height: 410px;
+  position: relative;
+}
+
+.main-screen__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.main-screen__title {
+  position: absolute;
+  z-index: 5;
+  bottom: 84px;
+  right: 0;
+  text-shadow: 0 2.5px 1px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "PT Serif";
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  line-height: 48px;
+  text-transform: uppercase;
+  max-width: 770px;
+}
+
+.main-screen__text {
+  padding: 48px 100px 0 100px;
+}
+
+.main-screen__text p {
+  color: #646667;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: center;
+}
+
+.main-screen__link {
+  height: 56px;
+  max-width: 370px;
+  margin: 40px auto 0 auto;
+  padding: 20px 0;
+}
+
+.main-screen__link span {
+  z-index: 15;
+  position: relative;
+}
+
+.btn {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: #007397;
+  text-align: center;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  background-color: #00526b;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.btn:hover::after {
+  width: 100%;
+  left: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+@media (max-width: 1169px) {
+  .header__body {
+    margin: 40px 5px;
+  }
 }
 
 @media (max-width: 988px) {

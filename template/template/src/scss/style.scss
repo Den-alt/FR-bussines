@@ -69,4 +69,104 @@ $font_family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
 }
+.content {
+  margin: 101px 0 0 0;
+}
+.blue-bg {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 31%;
+    height: 130%;
+    left: -50px;
+    top: -95px;
+    transform: rotate(18deg);
+    background-image: linear-gradient(
+      198deg,
+      #007397 0%,
+      rgba(0, 115, 151, 0) 100%
+    );
+  }
+}
+.main-screen {
+  &__label {
+    height: 410px;
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 5;
+    bottom: 84px;
+    right: 0;
+    text-shadow: 0 2.5px 1px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: "PT Serif";
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    line-height: 48px;
+    text-transform: uppercase;
+    max-width: 770px;
+  }
+  &__text {
+    p {
+      color: #646667;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 36px;
+      text-align: center;
+    }
+    padding: 48px 100px 0 100px;
+  }
+  &__link {
+    span {
+      z-index: 15;
+      position: relative;
+    }
+    height: 56px;
+    max-width: 370px;
+    margin: 40px auto 0 auto;
+    padding: 20px 0;
+  }
+}
+.btn {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: #007397;
+  text-align: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    background-color: #00526b;
+    transition: all 0.5s ease 0s;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+      transition: all 0.5s ease 0s;
+    }
+  }
+}
 //TODO------------------------------------
