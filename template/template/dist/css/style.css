@@ -679,6 +679,7 @@ h6 {
 
 .country__map {
   height: 448px;
+  background-color: grey;
 }
 
 @media (max-width: 1190px) {

@@ -477,16 +477,16 @@ $font_family: "Montserrat", sans-serif;
 }
 
 .country {
-
   &__title {
     margin: 0 0 40px 0;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       margin: 0 0 25px 0;
     }
   }
 
   &__map {
     height: 448px;
+    background-color: grey;
   }
 }
 
